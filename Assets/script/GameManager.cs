@@ -12,8 +12,7 @@ public class GameManager : MonoBehaviour
     private int time;
     [SerializeField]
     private int Score;
-    [SerializeField]
-    private int burnt_index;
+    public int burnt_index;
 
     [SerializeField]
     private TextMeshProUGUI Timar;
@@ -80,7 +79,7 @@ public class GameManager : MonoBehaviour
         Score_text.text = " Score: " + Score;
 
        StartCoroutine(Herat_check());
-        StartCoroutine(burnt_check());
+       StartCoroutine(burnt_check());
     }
     public void Damage()
     {
@@ -125,9 +124,9 @@ public class GameManager : MonoBehaviour
         }
         yield return null;
     }
-    IEnumerator burnt_use()
+    public IEnumerator burnt_use()
     {
-        burnt_index -= 1;
+        burnt_index -=1;
         yield return null;
     }
     IEnumerator burnt_check()

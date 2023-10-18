@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Dead Lien
+  - monster
   layers:
   - Default
   - TransparentFX

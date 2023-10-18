@@ -4186,6 +4186,7 @@ MonoBehaviour:
   HP: 3
   time: 100
   Score: 0
+  burnt_index: 5
   Timar: {fileID: 1632794363}
   Score_text: {fileID: 1243351474}
   burnt: {fileID: 989384298}
@@ -6453,8 +6454,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -200, y: 75}
-  m_SizeDelta: {x: 400, y: 150}
+  m_AnchoredPosition: {x: -225, y: 177}
+  m_SizeDelta: {x: 450, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &989384298
 MonoBehaviour:
@@ -6476,7 +6477,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '* 10/10'
+  m_text: <sprite=0><sprite=0><sprite=0><sprite=0><sprite=0>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90d876245932bde45916e54953d56fe4, type: 2}
   m_sharedMaterial: {fileID: -330908830478892901, guid: 90d876245932bde45916e54953d56fe4,
@@ -6496,7 +6497,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: 31580a56ec8372a4ab5c9df9442a6882, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901
@@ -6511,7 +6512,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

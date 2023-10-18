@@ -78,7 +78,7 @@ MonoBehaviour:
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 0
-    m_Scale: 1
+    m_Scale: 2
     m_Name: burnt_0
     m_HashCode: -197699440
   m_SpriteGlyphTable:
@@ -90,8 +90,8 @@ MonoBehaviour:
       m_HorizontalBearingY: 143
       m_HorizontalAdvance: 121
     m_GlyphRect:
-      m_X: 121
-      m_Y: 22
+      m_X: 120
+      m_Y: 23
       m_Width: 121
       m_Height: 286
     m_Scale: 1

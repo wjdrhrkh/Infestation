@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     private int time;
     [SerializeField]
     private int Score;
+    [SerializeField]
+    private int burnt_index;
 
     [SerializeField]
     private TextMeshProUGUI Timar;
@@ -19,6 +21,8 @@ public class GameManager : MonoBehaviour
     private TextMeshProUGUI Score_text;
     [SerializeField]
     private TextMeshProUGUI burnt;
+    [SerializeField]
+    private TextMeshProUGUI Heart;
 
     int min;
     float src;
@@ -70,11 +74,13 @@ public class GameManager : MonoBehaviour
             }
         }
 
-
         src -= Time.deltaTime;
 
         Timar.text = ">>" + string.Format("{0:D1}:{1:D2}", min, (int)src)+"<<";
         Score_text.text = " Score: " + Score;
+
+       StartCoroutine(Herat_check());
+        StartCoroutine(burnt_check());
     }
     public void Damage()
     {
@@ -97,4 +103,68 @@ public class GameManager : MonoBehaviour
         Debug.Log("게임 클리어");
     }
 
+    IEnumerator Herat_check()
+    {
+        switch(HP)
+        {
+            case 3: 
+                {
+                    Heart.text = "<sprite=1> <sprite=1> <sprite=1>";
+                }
+                break;
+            case 2:
+                {
+                    Heart.text = "<sprite=1> <sprite=1> <sprite=2>";
+                }
+                break;
+            case 1:
+                {
+                    Heart.text = "<sprite=1> <sprite=2> <sprite=2>";
+                }
+                break;
+        }
+        yield return null;
+    }
+    IEnumerator burnt_use()
+    {
+        burnt_index -= 1;
+        yield return null;
+    }
+    IEnumerator burnt_check()
+    {
+        switch (burnt_index)
+        {
+            case 5:
+                {
+                    burnt.text = "<sprite=0><sprite=0><sprite=0><sprite=0><sprite=0>";
+                }
+                break;
+            case 4:
+                {
+                    burnt.text = "<sprite=0><sprite=0><sprite=0><sprite=0>";
+                }
+                break;
+            case 3:
+                {
+                    burnt.text = "<sprite=0><sprite=0><sprite=0>";
+                }
+                break;
+            case 2:
+                {
+                    burnt.text = "<sprite=0><sprite=0>";
+                }
+                break;
+            case 1:
+                {
+                    burnt.text = "<sprite=0>";
+                }
+                break;
+            default:
+                {
+                    burnt.text = "";
+                }
+                break;
+        }
+        yield return null;
+    }
 }

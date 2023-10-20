@@ -1155,6 +1155,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
+  gun_fire: {fileID: 8300000, guid: 8e8ece6a368ad684fab66491914594de, type: 3}
+  empty_magazine: {fileID: 8300000, guid: db55647b410b84c4597ac0e635f5167d, type: 3}
+  Reroad: {fileID: 8300000, guid: f70cf7737a53d1948a2f6a8c57f9f5ee, type: 3}
 --- !u!65 &1548824403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1225,8 +1228,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548824401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.81, y: 0.78, z: -21.96}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.01, y: 2.44, z: -21.54}
+  m_LocalScale: {x: 0.61105, y: 0.61105, z: 1.6104834}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6

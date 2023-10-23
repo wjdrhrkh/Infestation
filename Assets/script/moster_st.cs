@@ -10,6 +10,10 @@ public class moster_st : MonoBehaviour
     private void Update()
     {
         StartCoroutine(Monster_Move());
+        if (mon_HP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     IEnumerator Monster_Move()

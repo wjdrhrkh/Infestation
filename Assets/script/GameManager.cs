@@ -60,6 +60,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if(HP<=0)
+        {
+            GameOver();
+        }
+
         if(src<=0)
         {
             if (min <= 0)
@@ -80,6 +85,7 @@ public class GameManager : MonoBehaviour
 
        StartCoroutine(Herat_check());
        StartCoroutine(burnt_check());
+        
     }
     public void Damage()
     {
@@ -93,7 +99,7 @@ public class GameManager : MonoBehaviour
 
     void GameOver()
     {
-        
+        Debug.Log("게임오버");
     }
 
     void GameClear()
@@ -119,6 +125,11 @@ public class GameManager : MonoBehaviour
             case 1:
                 {
                     Heart.text = "<sprite=1> <sprite=2> <sprite=2>";
+                }
+                break;
+            default:
+                {
+                    Heart.text = "<sprite=2> <sprite=2> <sprite=2>";
                 }
                 break;
         }

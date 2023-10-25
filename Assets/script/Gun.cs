@@ -22,15 +22,16 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger)) 
+        if (Input.GetKeyDown(KeyCode.E)) 
         {
-            StartCoroutine(GameManager.Game_Mg.burnt_use());
-            if (GameManager.Game_Mg.burnt_index != 0)
+            if (GameManager.Game_Mg.burnt_index > 0)
             {
+                StartCoroutine(GameManager.Game_Mg.burnt_use());
+                audio.clip = gun_fire;
+                audio.Play();
                 Debug.DrawRay(transform.position, transform.forward * max_ray, Color.blue, 0.1f);
                 if (Physics.Raycast(transform.position, transform.forward, out hit, max_ray))
                 {
-                    audio.clip = gun_fire;
                     audio.Play();
                     if (hit.transform.CompareTag("monster"))
                     {
@@ -45,7 +46,7 @@ public class Gun : MonoBehaviour
             }
 
         }
-        if(OVRInput.GetDown(OVRInput.Button.SecondaryHandTrigger) && GameManager.Game_Mg.burnt_index != 5)
+        if(Input.GetKeyDown(KeyCode.R) && GameManager.Game_Mg.burnt_index != 5)
         {
             audio.clip = Reroad;
             audio.Play();

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.02163964, g: 0.011424323, b: 0.019331763, a: 1}
+  m_IndirectSpecularColor: {r: 0.021663431, g: 0.011397837, b: 0.019348683, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3428,6 +3428,7 @@ GameObject:
   - component: {fileID: 557235845}
   - component: {fileID: 557235844}
   - component: {fileID: 557235843}
+  - component: {fileID: 557235848}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -3843,6 +3844,22 @@ MonoBehaviour:
   m_MoveObjectOut: 15
   m_DirectionalAnchorRotation: 1
   m_PoseProvider: {fileID: 0}
+--- !u!114 &557235848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557235841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3e3e49cac184b4bb52f396eab4248d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 10
+  gun_fire: {fileID: 8300000, guid: 8e8ece6a368ad684fab66491914594de, type: 3}
+  empty_magazine: {fileID: 8300000, guid: db55647b410b84c4597ac0e635f5167d, type: 3}
+  Reroad: {fileID: 8300000, guid: f70cf7737a53d1948a2f6a8c57f9f5ee, type: 3}
 --- !u!1001 &558897609
 PrefabInstance:
   m_ObjectHideFlags: 0

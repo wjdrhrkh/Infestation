@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class Gun : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)) 
+        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger)) 
         {
             StartCoroutine(GameManager.Game_Mg.burnt_use());
             if (GameManager.Game_Mg.burnt_index != 0)
@@ -35,7 +36,6 @@ public class Gun : MonoBehaviour
                     {
                         StartCoroutine(hit.transform.GetComponent<moster_st>().monster_damage(Damage));
                     }
-
                 }
             }
             else
@@ -45,7 +45,7 @@ public class Gun : MonoBehaviour
             }
 
         }
-        if(Input.GetKeyDown(KeyCode.R)&&GameManager.Game_Mg.burnt_index != 5)
+        if(OVRInput.GetDown(OVRInput.Button.SecondaryHandTrigger) && GameManager.Game_Mg.burnt_index != 5)
         {
             audio.clip = Reroad;
             audio.Play();

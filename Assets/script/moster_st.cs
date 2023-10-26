@@ -6,12 +6,14 @@ public class moster_st : MonoBehaviour
 {
     public int mon_HP = 100;
     public float speed = 10;
+    public int score = 100;
 
     private void Update()
     {
         StartCoroutine(Monster_Move());//몬스터 이동 코루틴 호출
         if (mon_HP <= 0)//몬스터 
         {
+            GameManager.Game_Mg.Score_up(score);
             Destroy(gameObject);
         }
     }

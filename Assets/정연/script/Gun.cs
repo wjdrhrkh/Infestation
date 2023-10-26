@@ -12,7 +12,7 @@ public class Gun : MonoBehaviour
     public AudioClip Reroad;
 
     RaycastHit hit;
-    float max_ray = 15f;
+    float max_ray = 30f;
     AudioSource audio;
 
     private OVRInput.Controller controller;
@@ -25,14 +25,14 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
+        Debug.DrawRay(transform.position, transform.forward * max_ray, Color.blue, 0.1f);//0.1초 동안 ray를 15 길이의 파란색 줄로 표시
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, controller))//오른손 검지 트리거 키를 누르면
         {
             if (GameManager.Game_Mg.burnt_index > 0)//총알 개수가 0개 이하가 아니면
             {
                 StartCoroutine(GameManager.Game_Mg.burnt_use());//총알 하나 깎기
                 audio.clip = gun_fire;//오디오 클립에 총 발사 소리 대입
-                audio.Play();//오디오 재생
-                Debug.DrawRay(transform.position, transform.forward * max_ray, Color.blue, 0.1f);//0.1초 동안 ray를 15 길이의 파란색 줄로 표시 
+                audio.Play();//오디오 재생 
                 if (Physics.Raycast(transform.position, transform.forward, out hit, max_ray))//ray 발사 
                 {
                     if (hit.transform.CompareTag("monster"))//ray에 닿은 오브젝트의 태그가 monster면

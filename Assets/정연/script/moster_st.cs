@@ -16,6 +16,8 @@ public class moster_st : MonoBehaviour
             GameManager.Game_Mg.Score_up(score);
             Destroy(gameObject);
         }
+        if(GameManager.Game_Mg.Game_End)
+            Destroy(gameObject);
     }
 
     IEnumerator Monster_Move()//몬스터를 이동시켜주는 코루틴

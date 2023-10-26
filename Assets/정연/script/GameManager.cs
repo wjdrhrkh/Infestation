@@ -22,6 +22,14 @@ public class GameManager : MonoBehaviour
     private TextMeshProUGUI burnt;
     [SerializeField]
     private TextMeshProUGUI Heart;
+    [SerializeField]
+    private GameObject Gameover_canvas;
+    [SerializeField]
+    private GameObject Gameclear_canvas;
+    [SerializeField]
+    private TextMeshProUGUI Clear_Score_text;
+
+    public bool Game_End = false;
 
     int min;
     float src;
@@ -94,18 +102,21 @@ public class GameManager : MonoBehaviour
 
     public void Score_up(int in_score)//스코어를 더해주는 함수
     {
+        in_score *= HP;
         Score += in_score;
     }
 
     void GameOver()//게임오버 함수
     {
-        Debug.Log("게임오버");
+        Game_End = true;
+        Gameover_canvas.SetActive(true);
     }
 
     void GameClear()//게임 클리어 함수
     {
-        //SceneManager.LoadScene("Clear");
-        Debug.Log("게임 클리어");
+        Game_End = true;
+        Gameclear_canvas.SetActive(true);
+        Clear_Score_text.text = "Score " + Score;
     }
 
     IEnumerator Herat_check()//hp ui 체크 코루틴
@@ -177,4 +188,5 @@ public class GameManager : MonoBehaviour
         }
         yield return null;
     }
+
 }

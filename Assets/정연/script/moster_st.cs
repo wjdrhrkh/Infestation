@@ -10,14 +10,14 @@ public class moster_st : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Game_Mg.Game_End)
+            Destroy(gameObject);
         StartCoroutine(Monster_Move());//몬스터 이동 코루틴 호출
         if (mon_HP <= 0)//몬스터 
         {
             GameManager.Game_Mg.Score_up(score);
             Destroy(gameObject);
         }
-        if(GameManager.Game_Mg.Game_End)
-            Destroy(gameObject);
     }
 
     IEnumerator Monster_Move()//몬스터를 이동시켜주는 코루틴

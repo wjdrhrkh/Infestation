@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject Gameclear_canvas;
     [SerializeField]
+    private GameObject main_canvas;
+    [SerializeField]
     private TextMeshProUGUI Clear_Score_text;
 
     public bool Game_End = false;
@@ -109,12 +111,14 @@ public class GameManager : MonoBehaviour
     void GameOver()//게임오버 함수
     {
         Game_End = true;
+        main_canvas.SetActive(false);
         Gameover_canvas.SetActive(true);
     }
 
     void GameClear()//게임 클리어 함수
     {
         Game_End = true;
+        main_canvas.SetActive(false);
         Gameclear_canvas.SetActive(true);
         Clear_Score_text.text = "Score " + Score;
     }

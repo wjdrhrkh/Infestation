@@ -3859,7 +3859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &498560142
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4520,6 +4520,8 @@ MonoBehaviour:
   Heart: {fileID: 369746703}
   Gameover_canvas: {fileID: 1426001362}
   Gameclear_canvas: {fileID: 0}
+  Clear_Score_text: {fileID: 0}
+  Game_End: 0
 --- !u!4 &664861220
 Transform:
   m_ObjectHideFlags: 0
@@ -4918,7 +4920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &690559321
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10801,7 +10803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1564863017
 RectTransform:
   m_ObjectHideFlags: 0
